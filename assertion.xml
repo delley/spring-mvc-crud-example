@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<saml:Assertion xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" ID="LDnKApnPbI.wOhjltYETx.KdDKA" IssueInstant="2016-10-26T20:31:11.453Z" Version="2.0">
+    <saml:Issuer>PF-DEVBOX</saml:Issuer>
+    <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+    <ds:SignedInfo>
+        <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+        <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+        <ds:Reference URI="#LDnKApnPbI.wOhjltYETx.KdDKA">
+            <ds:Transforms>
+                <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+            </ds:Transforms>
+            <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+            <ds:DigestValue/>
+        </ds:Reference>
+    </ds:SignedInfo>
+    <ds:SignatureValue/>
+</ds:Signature>
+<saml:Subject>
+    <saml:NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified">fvo0000@lab.wal-mart.com</saml:NameID>
+    <saml:SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer">
+        <saml:SubjectConfirmationData NotOnOrAfter="2016-10-26T20:36:11.453Z" Recipient="https://www.imbonline.com.br:443/bpmxwmhml/saml/SSO"/>
+    </saml:SubjectConfirmation>
+</saml:Subject>
+<saml:Conditions NotBefore="2016-10-26T20:26:11.453Z" NotOnOrAfter="2016-10-26T20:36:11.453Z">
+    <saml:AudienceRestriction>
+        <saml:Audience>https://www.imbonline.com.br/bpmxwmhml/saml/metadata</saml:Audience>
+    </saml:AudienceRestriction>
+</saml:Conditions>
+<saml:AuthnStatement AuthnInstant="2016-10-26T20:31:11.453Z" SessionIndex="LDnKApnPbI.wOhjltYETx.KdDKA">
+    <saml:AuthnContext>
+        <saml:AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:unspecified</saml:AuthnContextClassRef>
+    </saml:AuthnContext>
+</saml:AuthnStatement>
+</saml:Assertion>
