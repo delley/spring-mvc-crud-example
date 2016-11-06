@@ -23,7 +23,7 @@ public class ContatoDAOImpl implements ContatoDAO {
 	
 	@Override
 	public void saveOrUpdate(Contato contato) {
-		if(contato.getCodigo() > 0) {
+		if(contato.getCodigo() != null && contato.getCodigo() > 0) {
 			// Update
 			String sql = "UPDATE CONTATO SET NOME=?, EMAIL=?, ENDERECO=?, TELEFONE=? WHERE CODIGO=?";
 			jdbcTemplate.update(sql, contato.getNome(), contato.getEmail(), contato.getEndereco(), contato.getTelefone(), contato.getCodigo());
