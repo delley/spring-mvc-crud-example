@@ -12,7 +12,7 @@
 	<div align="center">
 		<h1>Lista de Contatos</h1>
 		<h3>
-			<a href="/newContact">Novo Contato</a>
+			<a href="novo">Novo Contato</a>
 		</h3>
 		<table border="1">
 			<tr>
