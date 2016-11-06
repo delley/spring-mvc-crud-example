@@ -40,20 +40,21 @@ public class ContatoController {
 	
 	@RequestMapping(value = "/salvar", method = RequestMethod.POST)
 	public ModelAndView salvar(@ModelAttribute Contato contato) {
+		System.out.println(contato);
 		contatoDAO.saveOrUpdate(contato);
 		return new ModelAndView("redirect:/");
 	}
 	
 	@RequestMapping(value = "/excluir", method = RequestMethod.GET)
 	public ModelAndView excluir(HttpServletRequest request) {
-		int codigo = Integer.parseInt(request.getParameter("codigo"));
+		int codigo = Integer.parseInt(request.getParameter("id"));
 		contatoDAO.delete(codigo);
 		return new ModelAndView("redirect:/");
 	}
 	
 	@RequestMapping(value = "/editar", method = RequestMethod.GET)
 	public ModelAndView editar(HttpServletRequest request) {
-		int codigo = Integer.parseInt(request.getParameter("codigo"));
+		int codigo = Integer.parseInt(request.getParameter("id"));
 		Contato contato = contatoDAO.get(codigo);
 		ModelAndView model = new ModelAndView("contatoForm");
 		model.addObject("contato", contato);
